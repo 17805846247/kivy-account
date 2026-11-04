@@ -5,7 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build APK with buildozer
-        uses: kivy/buildozer-action@main
+      - name: Build APK
+        uses: ArtemSBulgakov/buildozer-action@v1
         with:
-          python-version: "3.11"
+          command: buildozer android debug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk文件
+          path: bin/*.apk
