@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build APK
-        uses: tlsdiamond/buildozer-action@v1
+      - name: Build APK with buildozer
+        uses: kivy/buildozer-action@main
         with:
           python-version: "3.11"
