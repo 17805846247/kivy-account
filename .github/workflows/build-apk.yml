@@ -1,0 +1,11 @@
+name: Build APK
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build APK
+        uses: tlsdiamond/buildozer-action@v1
+        with:
+          python-version: "3.11"
