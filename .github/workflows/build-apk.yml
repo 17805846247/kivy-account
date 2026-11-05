@@ -9,6 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
       - name: Install system dependencies
         run: |
           sudo apt update
@@ -16,8 +21,8 @@ jobs:
 
       - name: Install buildozer
         run: |
-          python3 -m pip install --upgrade cython -i https://pypi.tuna.tsinghua.edu.cn/simple
-          python3 -m pip install buildozer==1.5.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+          python -m pip install --upgrade cython -i https://pypi.tuna.tsinghua.edu.cn/simple
+          python -m pip install buildozer==1.5.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
       - name: Build APK
         run: |
