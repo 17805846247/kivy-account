@@ -11,3 +11,4 @@ fullscreen = 0
 android.api = 33
 android.ndk = 25b
 android.sdk = 24
+android.build_tools = 34.0.0
