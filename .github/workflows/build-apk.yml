@@ -13,7 +13,7 @@ jobs:
 
       - name: Install buildozer
         run: |
-          python3 -m pip install --upgrade buildozer
+          python3 -m pip install buildozer==1.5.0
 
       - name: Build APK
         run: |
