@@ -9,10 +9,11 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y git python3-pip python3-venv zlib1g zlib1g-dev openjdk-17-jdk libffi-dev libssl-dev
+          sudo apt install -y git python3-pip python3-venv zlib1g zlib1g-dev openjdk-17-jdk libffi-dev libssl-dev cython3
 
       - name: Install buildozer
         run: |
+          python3 -m pip install --upgrade cython
           python3 -m pip install buildozer==1.5.0
 
       - name: Build APK
